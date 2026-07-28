@@ -6,7 +6,7 @@ def get_base64(image_file):
         return base64.b64encode(f.read()).decode()
 
 st.set_page_config(
-    page_title="QuickCalc",
+    page_title="QuickCalc - Free simple operation calculator",
     page_icon="🧮"
 )
 img = get_base64("Python_Programs/images/calc-backdrop.jpeg")
