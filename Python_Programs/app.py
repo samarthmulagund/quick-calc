@@ -9,7 +9,7 @@ st.set_page_config(
     page_title="QuickCalc",
     page_icon="🧮"
 )
-img = get_base64("Python_Programs/images/calculator_background.jpeg")
+img = get_base64("Python_Programs/images/calc-background.jpeg")
 st.markdown(
     f"""
     <style>
