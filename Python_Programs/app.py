@@ -32,7 +32,7 @@ if language == "English":
     first_num = st.number_input("Give 1st number", step = 1)
     second_num = st.number_input("Give 2nd number", step = 1)
 
-    col1, col2, col3, col4 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
     with col1:
         if st.button("+"):
              st.write(f"Sum is {first_num + second_num}")
@@ -51,7 +51,7 @@ elif language == "ಕನ್ನಡ":
     first_num = st.number_input("1 ನೇ ಸಂಖ್ಯೆಯನ್ನು ನೀಡಿ", step=1)
     second_num = st.number_input("2 ನೇ ಸಂಖ್ಯೆಯನ್ನು ನೀಡಿ.", step=1)
 
-    col1, col2, col3, col4 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
     with col1:
         if st.button("+"):
             st.write(f"ಮೊತ್ತವು {first_num + second_num}")
@@ -70,7 +70,7 @@ if language == "हिंदी":
     first_num = st.number_input("पहला नंबर दें", step = 1)
     second_num = st.number_input("दूसरा नंबर दें", step = 1)
 
-    col1, col2, col3, col4 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
     with col1:
         if st.button("+"):
              st.write(f"योग है {first_num + second_num}")
