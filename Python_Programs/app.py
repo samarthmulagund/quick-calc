@@ -31,27 +31,36 @@ if language == "English":
     if "first_number" not in st.session_state:
         st.session_state.first_number = None
 
-    if "operation" not in st.session_state:
-        st.session_state.operation = None
+    if "nums" not in st.session_state:
+        st.session_state.nums = ""
+
     if "expression" not in st.session_state:
         st.session_state.expression = ""
     st.title("QuickCalc")
-    nums = st.text_input("Give numbers", step = 0.5)
+    nums = st.text_input("Give numbers",key="nums")
     result = 0
 
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         if st.button("+"):
-            st.session_state.expression += nums + "+"
+            st.session_state.expression += st.session_state.nums + "+"
+            st.session_state.nums = ""  # Clears the box automatically
+            st.rerun()
     with col2:
           if st.button("-"):
-              st.session_state.expression += nums + "-"
+              st.session_state.expression += st.session_state.nums + "-"
+              st.session_state.nums = ""  # Clears the box automatically
+              st.rerun()
     with col3:
         if st.button("X"):
-            st.session_state.expression += nums + "X"
+            st.session_state.expression += st.session_state.nums + "*"
+            st.session_state.nums = ""  # Clears the box automatically
+            st.rerun()
     with col4:
         if st.button("÷"):
-            st.session_state.expression += nums + "÷"
+            st.session_state.expression += st.session_state.nums + "/"
+            st.session_state.nums = ""  # Clears the box automatically
+            st.rerun()
         if st.button("="):
             st.session_state.expression += nums
             answer = eval(st.session_state.expression)
